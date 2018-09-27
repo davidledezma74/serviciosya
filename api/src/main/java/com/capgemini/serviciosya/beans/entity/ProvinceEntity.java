@@ -1,13 +1,13 @@
 
-package com.capgemeini.serviciosya.beans.entity;
+package com.capgemini.serviciosya.beans.entity;
 
 
 import javax.persistence.*;
 
 
-@Entity (name = "City")
-@Table (name = "city")
-public class CityEntity {
+@Entity (name = "Province")
+@Table (name = "province")
+public class ProvinceEntity {
 
 
     // Map the fields (Database tables ) and properties (Java classes)
@@ -20,22 +20,22 @@ public class CityEntity {
     private String name;
 
     @ManyToOne
-    @JoinColumn (name="province_id")
-    private ProvinceEntity province;
+    @JoinColumn (name="country_id")
+    private CountryEntity country;
 
 
-    public CityEntity() {
+    public ProvinceEntity () {
 
         super ();
     }
 
-    public CityEntity(int id, String name, ProvinceEntity province) {
+    public ProvinceEntity (int id, String name, CountryEntity country) {
 
         super ();
 
         this.id = id;
         this.name = name;
-        this.province = province;
+        this.country = country;
     }
 
 
@@ -59,14 +59,14 @@ public class CityEntity {
         this.name = name;
     }
 
-    public ProvinceEntity getProvince () {
+    public CountryEntity getCountry () {
 
-        return province;
+        return country;
     }
 
-    public void setProvince (ProvinceEntity Province) {
+    public void setCountry (CountryEntity country) {
 
-        this.province = Province;
+        this.country = country;
     }
 
 

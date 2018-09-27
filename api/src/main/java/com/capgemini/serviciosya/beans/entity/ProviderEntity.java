@@ -1,8 +1,7 @@
 
-package com.capgemeini.serviciosya.beans.entity;
+package com.capgemini.serviciosya.beans.entity;
 
 
-import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Range;
 

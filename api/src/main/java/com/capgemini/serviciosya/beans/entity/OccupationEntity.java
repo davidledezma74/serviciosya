@@ -1,5 +1,5 @@
 
-package com.capgemeini.serviciosya.beans.entity;
+package com.capgemini.serviciosya.beans.entity;
 
 
 import javax.persistence.*;
@@ -7,9 +7,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-@Entity (name = "Country")
-@Table (name = "country")
-public class CountryEntity {
+@Entity (name = "Occupation")
+@Table (name = "occupation")
+public class OccupationEntity {
 
 
     // Map the fields (Database tables ) and properties (Java classes)
@@ -21,16 +21,16 @@ public class CountryEntity {
     @Column (name = "name", length = 48, nullable = false)
     private String name;
 
-    @OneToMany (mappedBy = "country", fetch = FetchType.EAGER)
-    private Set<ProvinceEntity> provinces = new HashSet<> ();
+    @ManyToMany (mappedBy="occupations")
+    private Set<ProviderEntity> providers = new HashSet<>();
 
 
-    public CountryEntity () {
+    public OccupationEntity() {
 
         super ();
     }
 
-    public CountryEntity (int id, String name) {
+    public OccupationEntity(int id, String name) {
 
         super ();
 
@@ -59,17 +59,17 @@ public class CountryEntity {
         this.name = name;
     }
 
-    public Set<ProvinceEntity> getProvinces () {
+    public Set<ProviderEntity> getProviders() {
 
-        return provinces;
+        return providers;
     }
 
-    public void setProvinces (Set<ProvinceEntity> provinces) {
+    public void setProviders(Set<ProviderEntity> providers) {
 
-        this.provinces = provinces;
+        this.providers = providers;
     }
 
-    @Override
+  @Override
     public String toString () {
 
         return this.name;

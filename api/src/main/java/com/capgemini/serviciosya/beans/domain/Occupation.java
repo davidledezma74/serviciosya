@@ -1,10 +1,10 @@
 
-package com.capgemeini.serviciosya.beans.domain;
+package com.capgemini.serviciosya.beans.domain;
 
 
 /**
  *
- *  <p>The class <code>com.capgemeini.serviciosya.beans.domain.Occupation<code/>
+ *  <p>The class <code>Occupation<code/>
  *  is a domain object for management the occupations information.
  *
  *  @author Raul Pena (raul.pena@gmail.com)
