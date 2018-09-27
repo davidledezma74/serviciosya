@@ -1,44 +1,37 @@
-
 <!--
    - Name: pom.xml
    - Description: Maven setup file.
-   - Author: David Ledezma (davidledezma@est.frba.utn.edu.ar)
- -->
-
+   - Author: Raul Peña (raul.pena@gmail.com)
+   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <!--
        - POM setup.
        -->
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <artifactId>serviciosya</artifactId>
         <groupId>com.capgemini</groupId>
+        <artifactId>serviciosya</artifactId>
         <version>1.0.0</version>
     </parent>
-
-
     <artifactId>api</artifactId>
     <name>api</name>
     <packaging>jar</packaging>
     <description>API Servicios Ya.</description>
 
-
     <developers>
         <developer>
-            <id>david.ledezma</id>
-            <name>David Ledezma</name>
-            <email>davidledezma@est.frba.utn.edu.ar</email>
+            <id>raul.g.pena</id>
+            <name>Raul Peña</name>
+            <email>raul.pena@gmail.com</email>
         </developer>
     </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <dependencies>
 
@@ -77,13 +70,6 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Hibernate -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.3.4.Final</version>
-        </dependency>
-
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -108,13 +94,13 @@
             <artifactId>javax.el-api</artifactId>
             <version>2.2.4</version>
         </dependency>
+
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>javax.el</artifactId>
             <version>2.2.4</version>
         </dependency>
 
-        <!--Spring Framework-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -122,9 +108,6 @@
         </dependency>
 
     </dependencies>
-
-
-
 
     <!--
        - Build setup.
@@ -142,6 +125,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

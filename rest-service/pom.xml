@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   - Name: pom.xml
+   - Description: Maven setup file.
+   - Author: Raul Peña (raul.pena@gmail.com)
+   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!--
-      - POM setup.
-      -->
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+    <!--
+       - POM setup.
+       -->
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.capgemini</groupId>
         <artifactId>serviciosya</artifactId>
         <version>1.0.0</version>
     </parent>
-
     <artifactId>rest-service</artifactId>
     <name>rest-service</name>
     <packaging>jar</packaging>
     <description>API Rest Servicios Ya.</description>
 
-
     <developers>
         <developer>
-            <id>david.ledezma</id>
-            <name>David Ledezma</name>
-            <email>davidledezma@est.frba.utn.edu.ar</email>
+            <id>raul.g.pena</id>
+            <name>Raul Peña</name>
+            <email>raul.pena@gmail.com</email>
         </developer>
     </developers>
-
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <dependencies>
 
@@ -88,19 +88,17 @@
             <scope>compile</scope>
             <version>1.0.15</version>
         </dependency>
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>log4j-over-slf4j</artifactId>
             <scope>compile</scope>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
